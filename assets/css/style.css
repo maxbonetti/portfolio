@@ -2,7 +2,8 @@
     --light-color:#fff;
     --dark-color: #333;
     --nav-color: #444;
-    --standard-pad: 10px;
+    --border-color:#390F32;
+    --standard-pad: 1rem;
 
 }
 
@@ -12,8 +13,8 @@ body {
     padding: 0;
 }
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-color);
+    color: var(--light-color);
     padding: var(--standard-pad) 0;
     text-align: start;
 }
@@ -23,33 +24,96 @@ nav {
     text-align: end;
 }
 nav a {
-    color: #fff;
+    color: var(--light-color);
     text-decoration: none;
     padding: 0 var(--standard-pad);
 }
 nav a:hover {
     text-decoration: underline;
+    cursor: pointer;
+}
+nav a:focus {
+    font:italic, rgb(117, 198, 230);
+    
 }
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-color);
+    color: var(--light-color);
     text-align: center;
     padding: var(--standard-pad) 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+h2 {
+    width:25vh;
+    height:25vh;
+    border-right:solid, var(--border-color);
+    padding: var(--standard-pad) 0;
+}
+/* div p{
+    width:75vh;
+    height:75vh;
+} */
 
-aside {
-    flex:1;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
+a{
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
+
+
+#footer-font{
+    font-style: italic;
+    font-size:x-small;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 50px;
+}
+
+.highlight-project {
+    width: 75vh;
+    height:75vh;
+    background-image:url(/portfolio/assets/images/Horiseon-End-Project-Pic.png);
+    grid-column:1/2;
+    grid-row:1/1;
+    border: 1px solid red;
+    background:black url(//portfolio/assets/images/Horiseon-End-Project-Pic.png);
+}
+
+.grid-item {
+    border: 1px solid #000;
+    padding: var(--standard-pad);
+    text-align:center;
+}
+
+.grid-item:first-child {
+    grid-row: span 2; 
+    grid-column: span 1;
+}
+
+.phone-content::before{
+    content:"📞";
+    padding:var(--standard-pad);
+
+}
+.email-content::after{
+    content:"📧";
+    padding:var(--standard-pad);
+    text-decoration: none;
+
+}
+.linkedin-content::after{
+    content:url(/portfolio/assets/images/linkedin-icon-pic.PNG);
+    content-visibility: 100%;
+    padding:var(--standard-pad);
+}
+.github-content::after{
+    content: url(/portfolio/assets/images/github-icon-picture.PNG);
+    padding: var(--standard-pad);
 }
