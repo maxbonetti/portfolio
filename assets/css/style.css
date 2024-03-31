@@ -1,3 +1,11 @@
+/* 
+root color code: 
+n = native screen resolution color
+l = 992px resolution
+m = 786px resolution
+s = 576px resolution
+*/
+
 :root{
     --light-color:#fff;
     --dark-color: #333;
@@ -44,7 +52,7 @@ nav a:hover {
 }
 
 nav a:focus {
-    font:italic, rgb(117, 198, 230);
+    text-decoration: underline wavy rgb(117, 198, 230);
     
 }
 
@@ -60,15 +68,19 @@ footer {
 }
 
 h2 {
+    display:inline-block;
     width:max-content;
     height:max-content;
     border-right:10px solid var(--border-color);
     padding: var(--standard-pad) 0;
+    grid-column:1;
+    text-decoration: underline wavy var(--nav-color);
+
 }
 
 div p {
     padding:var(--standard-pad);
-    ;
+ 
 }
 
 a{
@@ -76,12 +88,21 @@ a{
     text-align: center;
     cursor: pointer;
 }
-
+/* TAKE THIS OUT*/
+/* TAKE THIS OUT*/
+/* TAKE OUT THE RED BORDER below*/
+/* TAKE THIS OUT*/
+/* TAKE THIS OUT*/
 section {
     display:flex;
     margin-bottom:var(--standard-pad);
-    border-left:10px solid var(--border-color);
+    border:20px solid red;
 }
+/* TAKE THIS OUT*/
+/* TAKE THIS OUT*/
+/* TAKE OUT THE RED BORDER ABOVE*/
+/* TAKE THIS OUT*/
+/* TAKE THIS OUT*/
 
 #footer-font{
     font-style: italic;
@@ -99,9 +120,12 @@ section {
 .highlight-project {
     width: 75vh;
     height:75vh;
-    grid-column:1/2;
-    grid-row:1/1;
+    grid-column:span 1;
+    grid-row: span 2
     border: 1px solid red;
+    background-image:url(/portfolio/assets/images/Horiseon-End-Project-Pic.png);
+    background-size:cover;
+    background-position:center;
 }
 
 .grid-item {
@@ -110,11 +134,44 @@ section {
     text-align:center;
 }
 
-.grid-item:first-child {
+.grid-item:nth-child(1) {
     grid-row: span 2; 
     grid-column: span 1;
+    
 }
 
+.grid-item:nth-child(2) {
+    border: 1px solid #000;
+    padding: var(--standard-pad);
+    text-align:center;
+    background-image:url(/portfolio/assets/images/developer.mozilla.org_en-US_docs_Glossary_API.png);
+    background-size:cover;
+    background-position: center;
+}
+
+.grid-item:nth-child(3) {
+    border: 1px solid #000;
+    padding: var(--standard-pad);
+    text-align:center;
+    background-image:url();
+    background-size:cover;
+    background-position: center;
+}
+
+.grid-item:nth-child(4) {
+    border: 1px solid #000;
+    padding: var(--standard-pad);
+    text-align:center;
+    background-image:url();
+    background-size:cover;
+    background-position: center;
+}
+/*
+commented out because i cant get a correct color match for both to exsisting color layout
+also cant get the images to appear from my folder
+commented off phone/email before/after but i came back and decided against it just to show both at the same time for this.
+meaning the HTML img in for github/linked until ultimately i wanted to make thjem img 
+*/
 .phone-content::before{
     content:"📞";
     padding:var(--standard-pad);
@@ -126,12 +183,7 @@ section {
     text-decoration: none;
 
 }
-
-
-/* 
-commented out because i cant get a correct color match for both to exsisting color layout
-also cant get the images to appear from my folder
-
+/*
 .linkedin-content::after{
     content:url(/portfolio/assets/images/linkedin-icon-pic.PNG);
     content-visibility: 100%;
@@ -142,3 +194,102 @@ also cant get the images to appear from my folder
     padding: var(--standard-pad);
 }  
 */
+@media screen and (max-width: 992px) {
+    header{
+        background-color: #121378;
+        color: var(--light-color);
+        padding: var(--standard-pad) 0;
+        text-align: center;
+    }    
+    nav {
+        background-color: #5F60F1 ;
+        padding: var(--standard-pad) 0;
+        text-align: end;
+    }
+    
+    nav a {
+        color: var(--light-color);
+        text-decoration: none;
+        padding: 0 var(--standard-pad);
+        font-weight:bold;
+    
+    }
+    
+    nav a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    nav a:focus {
+        text-decoration: underline wavy rgb(117, 198, 230);
+        
+    }
+}
+@media screen and (max-width: 768px) {
+    header{
+        background-color: #39020B;
+        color: var(--light-color);
+        padding: var(--standard-pad) 0;
+        text-align: center;
+    }    
+    nav {
+        background-color: #993747 ;
+        padding: var(--standard-pad) 0;
+        text-align: end;
+    }
+    
+    nav a {
+        color: var(--light-color);
+        text-decoration: none;
+        padding: 0 var(--standard-pad);
+        font-weight:bold;
+    
+    }
+    
+    nav a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    nav a:focus {
+        text-decoration: underline wavy rgb(117, 198, 230);
+        
+    }
+}
+@media screen and (max-width: 576px) {
+    header{
+        background-color: #003C08;
+        color: var(--light-color);
+        padding: var(--standard-pad) 0;
+        text-align: center;
+    }    
+    nav {
+        background-color: #1BF8A5 ;
+        padding: var(--standard-pad) 0;
+        text-align: end;
+    }
+    
+    nav a {
+        color: var(--light-color);
+        text-decoration: none;
+        padding: 0 var(--standard-pad);
+        font-weight:bold;
+    
+    }
+    
+    nav a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    nav a:focus {
+        text-decoration: underline wavy rgb(117, 198, 230);
+        
+    }
+}
+.dancing-cat-gif {
+    display:inline-block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
