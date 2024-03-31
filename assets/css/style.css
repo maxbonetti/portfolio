@@ -2,7 +2,7 @@
     --light-color:#fff;
     --dark-color: #333;
     --nav-color: #444;
-    --border-color:#390F32;
+    --border-color:#a49ca9;
     --standard-pad: 1rem;
 
 }
@@ -12,49 +12,64 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: var(--dark-color);
     color: var(--light-color);
     padding: var(--standard-pad) 0;
     text-align: start;
 }
+
+h1{
+    text-align:center;
+}
+
 nav {
     background-color: #444;
     padding: var(--standard-pad) 0;
     text-align: end;
 }
+
 nav a {
     color: var(--light-color);
     text-decoration: none;
     padding: 0 var(--standard-pad);
+    font-weight:bold;
+
 }
+
 nav a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
 nav a:focus {
     font:italic, rgb(117, 198, 230);
     
 }
+
 footer {
     background-color: var(--dark-color);
     color: var(--light-color);
     text-align: center;
-    padding: var(--standard-pad) 0;
+    padding: var(--standard-pad);
     position: fixed;
     bottom: 0;
     width: 100%;
+    position: relative;
 }
+
 h2 {
-    width:25vh;
-    height:25vh;
-    border-right:solid, var(--border-color);
+    width:max-content;
+    height:max-content;
+    border-right:10px solid var(--border-color);
     padding: var(--standard-pad) 0;
 }
-/* div p{
-    width:75vh;
-    height:75vh;
-} */
+
+div p {
+    padding:var(--standard-pad);
+    ;
+}
 
 a{
     list-style: none;
@@ -62,7 +77,11 @@ a{
     cursor: pointer;
 }
 
-
+section {
+    display:flex;
+    margin-bottom:var(--standard-pad);
+    border-left:10px solid var(--border-color);
+}
 
 #footer-font{
     font-style: italic;
@@ -74,16 +93,15 @@ a{
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 50px;
+    margin-top:var(--standard-pad);
 }
 
 .highlight-project {
     width: 75vh;
     height:75vh;
-    background-image:url(/portfolio/assets/images/Horiseon-End-Project-Pic.png);
     grid-column:1/2;
     grid-row:1/1;
     border: 1px solid red;
-    background:black url(//portfolio/assets/images/Horiseon-End-Project-Pic.png);
 }
 
 .grid-item {
@@ -108,12 +126,19 @@ a{
     text-decoration: none;
 
 }
+
+
+/* 
+commented out because i cant get a correct color match for both to exsisting color layout
+also cant get the images to appear from my folder
+
 .linkedin-content::after{
     content:url(/portfolio/assets/images/linkedin-icon-pic.PNG);
     content-visibility: 100%;
     padding:var(--standard-pad);
 }
 .github-content::after{
-    content: url(/portfolio/assets/images/github-icon-picture.PNG);
+    content: url(https://imgur.com/fAmReUu);
     padding: var(--standard-pad);
-}
+}  
+*/
