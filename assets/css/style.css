@@ -122,11 +122,21 @@ section {
     font-style: italic;
     font-size:x-small;
 }
+#divContainer {
+    width:75vw;
+    display:flex;
+}
+#contactContainer{
+    justify-self: center;
+
+}
+
 .footer-text {
     display:inline-flex;
     flex:1;
     justify-content: center;
     text-align: center;
+    gap:10rem;
 }
 
  .project-grid {
