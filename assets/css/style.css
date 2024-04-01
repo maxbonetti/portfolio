@@ -127,8 +127,10 @@ section {
     display:flex;
 }
 #contactContainer{
+    display:flex;
     justify-self: center;
-
+    align-items:center;
+    gap:175px;
 }
 
 .footer-text {
@@ -153,8 +155,8 @@ section {
     background-image:url(/portfolio/assets/images/Horiseon-End-Project-Pic.png);
     background-size:cover;
     background-position:center;
-    height: 75vh;
-    width: 75vh;
+    height:75vh;
+    width:75vh;
 }
 
 .grid-item {
